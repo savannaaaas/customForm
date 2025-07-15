@@ -76,6 +76,14 @@ export const RegistrationForm = React.memo(() => {
     setShowConfirmPassword((show) => !show);
   };
 
+  const handleMouseDownPassword = () => {
+    preventDefault();
+  };
+
+  const handleMouseUpPassword = () => {
+    preventDefault();
+  };
+
   return (
     <>
       <Modal open={open} onClose={handleClose}>
@@ -192,6 +200,8 @@ export const RegistrationForm = React.memo(() => {
                               : "display the password"
                           }
                           onClick={handleClickShowPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          onMouseUp={handleMouseUpPassword}
                           edge="end"
                         >
                           {showPassword ? <Visibility /> : <VisibilityOff />}
@@ -226,6 +236,8 @@ export const RegistrationForm = React.memo(() => {
                               : "display the password"
                           }
                           onClick={handleClickShowConfirmPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          onMouseUp={handleMouseUpPassword}
                           edge="end"
                         >
                           {showConfirmPassword ? (

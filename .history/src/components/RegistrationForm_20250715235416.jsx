@@ -226,6 +226,8 @@ export const RegistrationForm = React.memo(() => {
                               : "display the password"
                           }
                           onClick={handleClickShowConfirmPassword}
+                          onMouseDown={handleMouseDownPassword}
+                          onMouseUp={handleMouseUpPassword}
                           edge="end"
                         >
                           {showConfirmPassword ? (
